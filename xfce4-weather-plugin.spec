@@ -1,21 +1,16 @@
-%define oname xfce4-weather-plugin
- 
 Summary:	A weather plugin for the Xfce panel
-Name:		xfce-weather-plugin
+Name:		xfce4-weather-plugin
 Version:	0.6.1
 Release:	%mkrel 1
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
 URL:		http://goodies.xfce.org/projects/panel-plugins/xfce4-weather-plugin
-Source0:	http://goodies.xfce.org/releases/xfce4-weather-plugin/xfce4-weather-plugin-%{version}.tar.bz2
-Requires:	xfce-panel >= 4.3.0
-BuildRequires:	xfce-panel-devel >= 4.3.0
-BuildRequires:	libxfcegui4-devel >= 4.3
+Source0:	http://goodies.xfce.org/releases/xfce4-weather-plugin/%{name}-%{version}.tar.bz2
+Requires:	xfce-panel >= 4.4
+BuildRequires:	xfce-panel-devel >= 4.4
+BuildRequires:	libxfcegui4-devel >= 4.4
 BuildRequires:	perl(XML::Parser)
-Obsoletes:	xfce-weather
-Provides:	xfce-weather
-Obsoletes:	xfce-weather-panel
-Provides:	xfce-weather-panel
+Obsoletes:	xfce-weather-plugin
 BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
@@ -23,7 +18,7 @@ This panel plugin shows the current temperature and weather condition,
 using weather data provided by xoap.weather.com (www.weather.com).
 
 %prep
-%setup -qn %{oname}-%{version}
+%setup -q
 
 %build
 %configure2_5x
@@ -33,7 +28,7 @@ using weather data provided by xoap.weather.com (www.weather.com).
 rm -rf %{buildroot}
 %makeinstall_std 
  
-%find_lang %{oname}
+%find_lang %{name}
 
 %post
 %update_icon_cache hicolor
@@ -44,9 +39,9 @@ rm -rf %{buildroot}
 %clean
 rm -rf %{buildroot}
 
-%files -f %{oname}.lang
+%files -f %{name}.lang
 %defattr(-,root,root)
-%doc AUTHORS COPYING ChangeLog INSTALL README
+%doc AUTHORS ChangeLog README
 %dir %{_datadir}/xfce4/weather
 %{_datadir}/xfce4/weather/*
 %{_datadir}/xfce4/panel-plugins/*

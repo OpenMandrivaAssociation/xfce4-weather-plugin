@@ -1,7 +1,7 @@
 Summary:	A weather plugin for the Xfce panel
 Name:		xfce4-weather-plugin
 Version:	0.6.2
-Release:	%mkrel 4
+Release:	%mkrel 5
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
 URL:		http://goodies.xfce.org/projects/panel-plugins/xfce4-weather-plugin
@@ -9,11 +9,12 @@ Source0:	http://goodies.xfce.org/releases/xfce4-weather-plugin/%{name}-%{version
 Patch0:		01_save_config.patch
 Patch1:		%{name}-0.6.2-fix-utf8-encodings.patch
 Patch2:		%{name}-0.6.2-resolv-support.patch
-Requires:	xfce4-panel >= 4.4.2
+Patch3:		xfce4-weather-plugin-0.6.2-libtool-fixes.patch
 BuildRequires:	xfce4-panel-devel >= 4.4.2
 BuildRequires:	libxfcegui4-devel >= 4.4.2
 BuildRequires:	perl(XML::Parser)
 BuildRequires:	intltool
+Requires:	xfce4-panel >= 4.4.2
 Obsoletes:	xfce-weather-plugin
 BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
@@ -26,6 +27,7 @@ using weather data provided by xoap.weather.com (www.weather.com).
 %patch0 -p1
 %patch1 -p1
 %patch2 -p1
+%patch3 -p1
 
 %build
 # (tpg) needed for patch2

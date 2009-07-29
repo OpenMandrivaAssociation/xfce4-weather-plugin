@@ -1,6 +1,6 @@
 Summary:	A weather plugin for the Xfce panel
 Name:		xfce4-weather-plugin
-Version:	0.7.1
+Version:	0.7.2
 Release:	%mkrel 1
 License:	GPLv2+
 Group:		Graphical desktop/Xfce

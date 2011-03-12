@@ -11,7 +11,7 @@ Source0:	http://archive.xfce.org/src/panel-plugins/xfce4-weather-plugin/%{url_ve
 BuildRequires:	xfce4-panel-devel >= 4.4.2
 BuildRequires:	libxfcegui4-devel >= 4.4.2
 BuildRequires:	libxfce4util-devel
-BuildRequires:	lib64xml2-devel
+BuildRequires:	libxml2-devel
 BuildRequires:	perl(XML::Parser)
 BuildRequires:	intltool
 Requires:	xfce4-panel >= 4.4.2

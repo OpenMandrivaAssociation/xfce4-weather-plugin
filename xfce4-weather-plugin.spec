@@ -3,7 +3,7 @@
 Summary:	A weather plugin for the Xfce panel
 Name:		xfce4-weather-plugin
 Version:	0.7.4
-Release:	3
+Release:	4
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
 URL:		http://goodies.xfce.org/projects/panel-plugins/xfce4-weather-plugin
@@ -33,27 +33,15 @@ using weather data provided by xoap.weather.com (www.weather.com).
 %patch0 -p0
 
 %build
-
 %configure2_5x
 %make
 
 %install
-rm -rf %{buildroot}
-%makeinstall_std 
- 
-%find_lang %{name}
+%makeinstall_std
 
-%post
-%update_icon_cache hicolor
-
-%postun
-%clean_icon_cache hicolor
-
-%clean
-rm -rf %{buildroot}
+%find_lang %{name} %{name}.lang
 
 %files -f %{name}.lang
-%defattr(-,root,root)
 %doc AUTHORS ChangeLog README
 %dir %{_datadir}/xfce4/weather
 %{_datadir}/xfce4/weather/*

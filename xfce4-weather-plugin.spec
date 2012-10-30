@@ -16,7 +16,6 @@ BuildRequires:	perl(XML::Parser)
 BuildRequires:	intltool
 Requires:	xfce4-panel >= 4.4.2
 Obsoletes:	xfce-weather-plugin
-BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
 This panel plugin shows the current temperature and weather condition, 

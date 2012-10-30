@@ -2,18 +2,12 @@
 
 Summary:	A weather plugin for the Xfce panel
 Name:		xfce4-weather-plugin
-Version:	0.7.4
-Release:	5
+Version:	0.8.2
+Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
 URL:		http://goodies.xfce.org/projects/panel-plugins/xfce4-weather-plugin
 Source0:	http://archive.xfce.org/src/panel-plugins/xfce4-weather-plugin/%{url_ver}/%{name}-%{version}.tar.bz2
-
-# Patch0 from Arch Linux:
-# https://bugzilla.xfce.org/show_bug.cgi?id=8105
-# https://bugs.archlinux.org/task/26815
-Patch0:		xfce4-weather-plugin-0.7.4-working-XOAP-license-key.patch
-
 BuildRequires:	xfce4-panel-devel >= 4.4.2
 BuildRequires:	libxfcegui4-devel >= 4.4.2
 BuildRequires:	libxfce4util-devel
@@ -30,7 +24,6 @@ using weather data provided by xoap.weather.com (www.weather.com).
 
 %prep
 %setup -q
-%patch0 -p0
 
 %build
 %configure2_5x

@@ -37,6 +37,6 @@ using weather data provided by xoap.weather.com (www.weather.com).
 %doc AUTHORS ChangeLog README
 %dir %{_datadir}/xfce4/weather
 %{_datadir}/xfce4/weather/*
-%{_datadir}/xfce4/panel-plugins/*
-%{_libdir}/xfce4/panel-plugins/
+%{_datadir}/xfce4/panel/plugins/weather.desktop
+%{_libdir}/xfce4/panel/plugins/libweather.so
 %{_iconsdir}/hicolor/*/apps/*.png

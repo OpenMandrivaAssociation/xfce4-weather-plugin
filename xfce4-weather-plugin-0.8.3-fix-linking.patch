@@ -1,0 +1,13 @@
+diff -Naur xfce4-weather-plugin-0.8.3/panel-plugin/Makefile.am xfce4-weather-plugin-0.8.3.tpg/panel-plugin/Makefile.am
+--- xfce4-weather-plugin-0.8.3/panel-plugin/Makefile.am	2013-02-05 14:21:58.000000000 +0000
++++ xfce4-weather-plugin-0.8.3.tpg/panel-plugin/Makefile.am	2013-03-03 18:10:33.000000000 +0000
+@@ -47,7 +47,8 @@
+ 	$(GTK_LIBS)							\
+ 	$(LIBXML_LIBS)							\
+ 	$(SOUP_LIBS)						\
+-	$(LIBRESOLV)
++	$(LIBRESOLV)						\
++	$(LIBM)
+ 
+ libweather_la_LDFLAGS = \
+ 	-avoid-version \

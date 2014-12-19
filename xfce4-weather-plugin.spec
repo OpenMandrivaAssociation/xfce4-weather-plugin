@@ -2,8 +2,8 @@
 
 Summary:	A weather plugin for the Xfce panel
 Name:		xfce4-weather-plugin
-Version:	0.8.3
-Release:	2
+Version:	0.8.4
+Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
 URL:		http://goodies.xfce.org/projects/panel-plugins/xfce4-weather-plugin
@@ -30,7 +30,7 @@ using weather data provided by xoap.weather.com (www.weather.com).
 %build
 NOCONFIGURE=1 xdt-autogen
 
-%configure2_5x \
+%configure \
 	--disable-static
 
 %make

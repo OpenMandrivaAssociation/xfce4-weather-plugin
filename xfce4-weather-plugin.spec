@@ -1,9 +1,10 @@
 %define url_ver %(echo %{version} | cut -c 1-3)
+%define _disable_rebuild_configure 1
 
 Summary:	A weather plugin for the Xfce panel
 Name:		xfce4-weather-plugin
-Version:	0.8.4
-Release:	3
+Version:	0.8.10
+Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
 URL:		http://goodies.xfce.org/projects/panel-plugins/xfce4-weather-plugin

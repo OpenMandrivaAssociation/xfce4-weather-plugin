@@ -3,20 +3,27 @@
 
 Summary:	A weather plugin for the Xfce panel
 Name:		xfce4-weather-plugin
-Version:	0.8.10
+Version:	0.10.0
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
 URL:		http://goodies.xfce.org/projects/panel-plugins/xfce4-weather-plugin
 Source0:	http://archive.xfce.org/src/panel-plugins/xfce4-weather-plugin/%{url_ver}/%{name}-%{version}.tar.bz2
-BuildRequires:	pkgconfig(libxfce4panel-1.0)
-BuildRequires:	pkgconfig(libxfce4ui-1) >= 4.7.0
+
+BuildRequires:	pkgconfig(glib-2.0)
+BuildRequires:	pkgconfig(gthread-2.0)
+BuildRequires:	pkgconfig(gtk+-3.0)
 BuildRequires:	pkgconfig(libsoup-2.4)
+BuildRequires:	pkgconfig(libxfce4panel-2.0)
+BuildRequires:	pkgconfig(libxfce4ui-2)
+BuildRequires:	pkgconfig(libxfce4util-1.0)
 BuildRequires:	pkgconfig(upower-glib)
 BuildRequires:	pkgconfig(libxml-2.0)
 BuildRequires:	perl(XML::Parser)
 BuildRequires:	intltool
-Requires:	xfce4-panel >= 4.4.2
+
+Requires:	xfce4-panel
+Requires:	glib-networking
 Obsoletes:	xfce-weather-plugin
 
 %description
@@ -31,10 +38,10 @@ using weather data provided by xoap.weather.com (www.weather.com).
 %configure \
 	--disable-static
 
-%make
+%make_build
 
 %install
-%makeinstall_std
+%make_install
 
 %find_lang %{name} %{name}.lang
 

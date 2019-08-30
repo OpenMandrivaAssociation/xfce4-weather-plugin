@@ -1,4 +1,2 @@
-removed_sources:
-  xfce4-weather-plugin-0.8.4.tar.bz2: c8e7ff5551a16cc9dd4e3ee98e1dd8d099794ba8
 sources:
-  xfce4-weather-plugin-0.8.10.tar.bz2: cbe477356fe1bde6e93a38d2110c2135059a28e9
+  xfce4-weather-plugin-0.10.0.tar.bz2: a5b9432ac4439cc685cba152af3a3aa80b81c931

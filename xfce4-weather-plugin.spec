@@ -52,3 +52,4 @@ using weather data provided by xoap.weather.com (www.weather.com).
 %{_datadir}/xfce4/panel/plugins/*
 %{_libdir}/xfce4/panel/plugins/
 %{_iconsdir}/hicolor/*/apps/*.png
+%{_iconsdir}/hicolor/scalable/apps/org.xfce.panel.weather.svg

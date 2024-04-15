@@ -13,6 +13,7 @@ Source0:	http://archive.xfce.org/src/panel-plugins/xfce4-weather-plugin/%{url_ve
 BuildRequires:	pkgconfig(glib-2.0)
 BuildRequires:	pkgconfig(gthread-2.0)
 BuildRequires:	pkgconfig(gtk+-3.0)
+BuildRequires:	pkgconfig(json-c)
 BuildRequires:	pkgconfig(libsoup-2.4)
 BuildRequires:	pkgconfig(libxfce4panel-2.0)
 BuildRequires:	pkgconfig(libxfce4ui-2)

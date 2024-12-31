@@ -9,6 +9,8 @@ License:	GPLv2+
 Group:		Graphical desktop/Xfce
 URL:		https://goodies.xfce.org/projects/panel-plugins/xfce4-weather-plugin
 Source0:	https://archive.xfce.org/src/panel-plugins/xfce4-weather-plugin/%{url_ver}/%{name}-%{version}.tar.bz2
+# from https://gitlab.xfce.org/panel-plugins/xfce4-weather-plugin/-/merge_requests/28
+Patch1:		28.diff
 BuildRequires:	pkgconfig(glib-2.0)
 BuildRequires:	pkgconfig(gthread-2.0)
 BuildRequires:	pkgconfig(gtk+-3.0)
